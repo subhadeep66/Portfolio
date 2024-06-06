@@ -1,0 +1,635 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    color: white;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/back.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+}
+.container{
+    padding:10px 50px ;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color:white ;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+nav ul li a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+.Name{
+    font-size:90px;
+    font-weight: 1000;
+    color:#ff0051;
+    animation: Name 3s;
+    animation-iteration-count:1;
+}
+.Name span{
+    font-size: 60px;
+    color: white;
+}
+@keyframes Name {
+    from{
+        transform: translateY(200px);
+        color: #e5e4e4;
+    }
+    to{
+        transform: translateY(0px);
+
+    }
+}
+.header-text{
+    margin:300px 50px;
+    font-size: 20px;
+    font-weight: 800;
+    display: inline-block;
+    
+}
+.header-text h1{
+    margin: 10px 0;
+    font-weight: 400;
+    border-right: 4px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #ff004f;
+    animation: 
+        typing 3s steps(20),
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor{
+    50%{border-color: transparent}
+}
+@keyframes typing{
+    from{width: 0;}
+}
+/*___________________________________________________________________________________________*/
+#About{
+    padding: 80px 0;
+    color: #ababab;
+    background-color: rgb(23, 23, 23);
+    bottom: -450px;
+}
+.box{
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    position: relative;
+    right: 100px;
+}
+.box_1 img{
+    width: 100%;
+    height: 350px;
+    position: sticky;
+    margin-left: 40px;
+}
+.box_2{
+    width: 40%;
+    margin-left: 50px;
+}
+.box_2 p{
+    margin-top: 20px;
+    position: relative;
+    color: grey;
+    font-size: 15px;
+}
+.box_2 h1{
+    position: relative;
+    color: rgb(233, 236, 240);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.box_2 h1::after{
+    width: 0;
+    height:3px ;
+    content: '';
+    background: #ff004f;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+.box_2 h1:hover::after{
+    width: 30%;
+    transition: 2s;
+}
+.titles{
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-between;
+    font-weight: 800;
+}
+.titles p{
+    color: #7a092f;;
+}
+.menu{
+    background-color: rgb(255, 255, 255);
+    padding: 10px 4px;
+    text-decoration: none;
+    position: absolute;
+    right: 602px;
+    margin-top: 60px;
+    
+}
+.menu ul {
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-weight: 600;
+    list-style-type: none;
+}
+.one{
+    position: absolute;
+    right: 360px;
+    margin-top: 60px;
+}
+.two{
+    position: absolute;
+    right: 128px;
+    margin-top: 60px;
+}
+
+/*________________________________________________________________________*/
+.services{
+    display: flex;
+    justify-content: space-evenly;
+    height: 400px;
+    background-color: #3a0517;
+    width: 100%;
+    color: rgb(117, 114, 114);
+    margin-top: 70px;
+}
+.services h2{
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.673);
+}
+.serve{
+    background-color: rgba(0, 0, 0, 0.786);
+    width: 340px;
+    height: 50%;
+    transition: 0.5s;
+    transform: 0.5s;
+}
+.serve p{
+    width: 300px;
+    text-align: justify;
+    padding: 10px 10px 10px 40px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.815);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.serve:hover{
+    transform: translateY(-10px);
+    background-color:#ff005174;
+}
+
+/*______________________________________________________________*/
+#Project h2{
+    text-align: center;
+    margin-top:50px ;
+    font-size: 50px;
+    color: #b21d4a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+#Project{
+    background-color: #0d0d0d;
+}
+.projects{
+    display: flex;
+    justify-content: space-evenly;
+    padding:80px 0;
+}
+.project{
+    border-radius: 7px;
+    overflow: hidden;
+    position: relative;
+}
+.project img{
+    width: 300px;
+    height: 330px;
+    display: block;
+    border-radius: 7px;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 300px;
+    height: 0px;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff0051a2);
+    border-radius: 7px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    padding: 0 2px;
+    text-align: center;
+    align-content: center;
+    transition: height 0.5s;
+}
+.layer p{
+    width: 300px;
+    font-size: 13px;
+    padding-top: 3px;
+}
+.project:hover img{
+    transform: scale(1.1);
+}
+.project:hover .layer{
+    height: 330px;
+}
+.button{
+    position: relative;
+    left: 700px;
+    bottom: 40px;
+}
+.btn1{
+    background-color: #ff0051a2;
+}
+
+/*______________________________________________________________*/
+.footer li{
+    display: inline-block;
+    padding:10px 60px;
+    color: #ababab;
+}
+.footer{
+    padding: 0 110px;
+    margin-top:10px;
+    height: 200px;background-color: #000000;
+}
+.copyright{
+    position: relative;
+    text-align: center;
+    font-size: 13px;
+    top: 105px;
+}
+#fb img{
+    width: 25px;
+    z-index: 2;
+}
+#fb a{
+    position: relative;
+    right: 25px;
+}
+#ig img{
+    width: 40px;
+    position: relative;
+    top: 7px;
+}
+#tw img{
+    width: 21px;
+    position: relative;
+    top: 2px;
+}
+#w img{
+    width: 20px;
+}
+.question{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    position: relative;
+    left: 900px;
+    bottom: 25px;
+}
+
+/*___________________COntact_____________________________________________________________*/
+
+.tox{
+    display: flex;
+    justify-content: space-between;
+}
+.info{
+    margin-top:80px;
+    margin-left: 100px;
+    font-size: 26px;
+}
+.info p{
+    font-size: 14px;
+    padding: 20px 0 0 20px ;
+}
+.form{
+    width: 40%;
+    position:absolute;
+    top: 200px;
+    right: 200px;
+    height: 50%;
+    display: block;
+}
+.btn{
+    display: block;
+    border-radius: 2px;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-width: 0cap;
+    margin-top: 30px;
+    margin-left: 20px;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px;
+    border:1px solid #ff004f;
+    background-color: #000000;
+}
+.btn:hover{
+    background-color: #ff004f;
+}
+.name{
+    color:white;
+}
+form input{
+    width: 70%;
+    padding: 13px;
+    margin-bottom: 10px;
+    background-color: #262626;
+    border-width: 0cap;
+    color: white;
+}
+.phone{
+    width: 150px;
+   
+}
+.phone:hover{
+    width: 150px;
+    animation: phone 0.5s;
+    animation-iteration-count :2;
+}
+@keyframes phone {
+    from{
+        transform: rotate(35deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-35deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(35deg);
+    }
+}
+/*________________________________________________________________responsic=ve_____________________________________________________*/
+
+
+
+@media only screen and (min-width:360px)and (max-width:700px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #header{
+        background-image: url(images/back.png);
+        background-position-x: center;
+        width:380%;
+        height: 370vh;
+    }
+    nav{
+        position: absolute;
+        top: 0;
+    }
+    nav ul li a{
+        font-size: 40px;
+        color:white;
+        font-weight: 700;
+        position: relative;
+        left: 750px;
+        top: 30px;
+    }
+    .header-text{
+        position: relative;
+        top: 900px;
+    }
+    .header-text p{
+        font-size: 90px;
+    }
+    .header-text h1{
+        font-size: 80px;
+        color: #ff004f;
+    }
+    .Name{
+        font-size: 180px;
+    }
+    #About{
+        width:380%;
+        height: 300vh;
+    }
+    .box{
+        display: inline-block;
+    }
+    .box_1 img{
+        width: 60%;
+        height: 900px;
+        position: relative;
+        left: 420px;
+        margin-bottom: 40px;
+    }
+    .box_2{
+        width: 100%;
+        text-align: justify;
+        padding: 20px;
+    }
+    .box_2 h1{
+        font-size: 90px;
+    }
+    .box_2 p{
+        font-size: 50px;
+    }
+    .menu{
+        background-color: rgb(255, 255, 255);
+        padding: 10px 4px;
+        text-decoration: none;
+        position: absolute;
+        left:80px;
+        margin-top: 80px;
+        
+    }
+    .one{
+        position: absolute;
+        left: 450px;
+    }
+    .two{
+        position: absolute;
+        left: 900px;
+    }
+    .menu ul {
+        font-size: 50px;
+    }
+    #Services{
+        width: 380%;
+    }
+    .services{
+        height: 270vh;
+        display: block;
+        padding: 80px 300px;
+    }
+    .services h2{
+        font-size: 80px;
+    }
+    .serve{
+        width: 1200px;
+        padding:40px 0;
+    }
+    .service2{
+        padding-top: 40px;
+    }
+    .serve p{
+        width: 1050px;
+        font-size: 56px;
+    }
+    #Project{
+        width: 380%;
+    }
+    #Project h2{
+        font-size: 110px;
+    }
+    .projects{
+        display:block;
+        padding: 20px 20px;
+    }
+    .project img{
+        width: 800px;
+        height: 800px;
+    }
+    .project:hover img{
+        transform: scale(1);
+    }
+    .button{
+        position: relative;
+        left: 660px;
+        width: 200px;
+        height: 80px;
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .btn{
+        padding-top: 18px;
+        width: 400px;
+        height: 100px;
+        font-size: 50px
+    }
+    .layer{
+        width: 800px;
+        height: 0px;
+    }
+    .layer h3{
+        font-size: 60px;
+    }
+    .layer p{
+        width: 700px;
+        font-size: 50px;
+        padding-top: 3px;
+        text-align: justify;
+    }
+    .project:hover .layer{
+        height: 800px;
+    }
+    #Footer{
+        width: 380%;
+        height: 80vh;
+    }
+    .copyright{
+        font-size: 35px;
+    }
+    #fb img{
+        width: 70px;
+    }
+    #fb a{
+        position: relative;
+        right: 25px;
+        top: 2px;
+    }
+    #ig img{
+        width: 100px;
+        position: relative;
+        top: 16px;
+    }
+    #tw img{
+        width: 60px;
+        position: relative;
+        bottom: 2px;
+    }
+    #w img{
+        width: 55px;
+    }
+    .question{
+        font-size: 40px;
+    }
+    
+    .tox{
+        display: block;
+        justify-content: space-between;
+    }
+    .info{
+        margin-top:20px;
+        margin-left: 50px;
+        font-size: 18px;
+    }
+    .info p{
+        font-size: 11px;
+        padding: 20px 0 0 20px ;
+    }
+    .form{
+        width: 40%;
+        position:absolute;
+        top: 300px;
+        right: 200px;
+        height: 50%;
+        display: block;
+    }
+    .btn{
+        font-size: 20px;
+        width: 100px;
+        height: 35px;
+        padding-top:5px ;
+        position: relative;
+        bottom: 15px;
+        left: 180px;
+    }
+    form input{
+        width: 180%;
+    }
+    .phone{
+        width: 100px;
+    
+    }
+    .phone:hover{
+        width: 100px;
+    }
+
+
+}
